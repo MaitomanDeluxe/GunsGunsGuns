@@ -5,7 +5,9 @@ function send(msg) {
 }
 
 function startSocket() {
-  socket = new WebSocket("wss://your-worker-url.workers.dev");
+  // net.js の該当行
+  const socket = new WebSocket("wss://gunsgunsguns.maikanamaikana.workers.dev/");
+
 
   socket.onmessage = (event) => {
     const msg = JSON.parse(event.data);
